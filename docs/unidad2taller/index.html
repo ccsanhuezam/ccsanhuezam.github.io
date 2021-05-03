@@ -123,7 +123,25 @@
           
 <h1 class="title">Unidad 2 Food</h1>
 <div class="content ">
-  <h3 id="fotogrametría-con-recap">FOTOGRAMETRÍA CON RECAP</h3>
+  <h3 id="entrevista-a-referente">Entrevista a referente</h3>
+<p>Para comenzar esta unidad de comida, se nos dio la tarea de entrevistar a un referente para aprender y adentrarse un poco más en la cocina y la tecnología que se usa actualmente dentro de la gastronomía, es por eso que se entrevistó a Gustavo Saez, un respostero destacado por la calidad de sus platos y la estética. Aquí adjunto el PDF para conocerlo mejor.</p>
+
+<iframe id='pdf-hugo' src='/pdf/Entrevistaareferente.pdf'
+frameborder="0" scrolling="yes" seamless="seamless" style="display:block; width:100%; height:60vh;"></iframe>
+
+<button onclick="myFunction('pdf-hugo')" class="button button-primary mb-2" style="width: 100%;">Ver Pantalla Completa</button>
+
+<script>
+    function myFunction(id) {
+      document.getElementById(id).classList.add("full-screen");
+    }
+    document.addEventListener('keydown', function(event){
+	if(event.key === "Escape"){
+        document.getElementById('pdf-hugo').classList.remove("full-screen");
+	}
+});
+</script>
+<h3 id="fotogrametría-con-recap-photo">Fotogrametría con Recap Photo</h3>
 <h3 id="renders">Renders</h3>
 <p>Aquí se mostrará un poco lo que fue hacer fotogrametría con el programa Recap Photo de un plato de frutas, en este caso, plátanos, kiwi y granada. Para esto se presentarán distintos renders, con fondo plano, de detalle y con contexto, elaborados con la aplicación Keyshot. Finalmente se presentará un video del fotograma para así mostrarlo en 360º.</p>
 <p><img src="/img/untitled.63.jpg" alt="Imagen Simple"></p>
