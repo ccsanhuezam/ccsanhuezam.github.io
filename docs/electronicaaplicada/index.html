@@ -131,13 +131,17 @@
           
 <h1 class="title">Electrónica Aplicada a Prototipos</h1>
 <div class="content ">
-  <h3 id="clase-11-de-agosto">Clase 11 de Agosto</h3>
-<p>Aquí se puede ver un circuito simple para encender una led roja, donde se ocupó una protoboard, pila de 9v, dos cables (uno para el negativo y otro para el positivo), una resistencia de 220 ohms y por último un led. Por una parte la pila da energía al circuito, el cable rojo está conectado al signo &ldquo;+&rdquo; de la protoboard lo que significa que toda esa línea tiene energía positiva. Lo contrario pasa con el cable negro, ya que está conectado al signo &ldquo;-&rdquo; de la protoboard, entregando energía negativa a toda la línea horizontal. Por otro lado, una patita de la resitencia está conectada a la positiva (destacar que la resistencia no tiene polos) y otra está conecta a la proto, esto significa que ahora toda esa línea tiene positividad, por lo que se procede a conectar el polo positivo de la led en esa línea, y el negativo a línea donde está conectado el cable negro (negativo). Todo este proceso logra que la led se encienda de una manera muy brillante.
-<img src="/img/IMG-9114.jpg" alt="Imagen Simple"></p>
-<h3 id="clase-18-de-agosto">Clase 18 de Agosto</h3>
-<p>En esta oportunidad, hicimos un circuito cerrado utilizando el programa Tinkercad, también se utilizó una batería de 9v, 2 transistores, 2 condensadores, 2 resistencias de 220 ohms y 2 de 100k y por último dos leds. Y a pesar de la variedad de intentos no se logró que las led prendieran de forma discontinua. Donde en el primero un condensador colapsa junto con una led, y en el segundo intento los dos condensadores colapsan. La teoría es que hice mal las conexiones de los elementos.
-<img src="/img/Intento1.png" alt="Imagen Simple">
-<img src="/img/Intento2.png" alt="Imagen Simple"></p>
+  <h2 id="clase-11-de-agosto">Clase 11 de Agosto</h2>
+<h3 id="circuito-en-serie">Circuito en serie</h3>
+<p>Aquí se puede ver un circuito simple en donde la corriente fluye por un solo camino, ya que todos los objetos están conectados seguidamente. En este caso, se usan 3 leds una resistencia de 220 ohms, ya que eso es lo que generalmente usan las luces leds. Al iniciar la simulación las luces se encienden al mismo tiempo y con la misma brillantez debido a que solo hay una resistencia y todas se &ldquo;alimentan&rdquo; de la misma, por lo que se reparte equitativamente entre las tres.
+<img src="/img/Circuito_En_Serie.png" alt="Imagen Simple"></p>
+<h3 id="circuito-en-paralelo">Circuito en paralelo</h3>
+<p>Como segundo ejercicio, se realizó un circuito en paralelo, aquí los voltajes son iguales para todos los objetos que estén en paralelo. La diferencia con el anterior es que la corriente tiene más camino por recorrer, no solo uno, por lo que la intensidad de la corriente depende del valor de cada resistencia. En este caso se usó el mismo tipo de resistencia para las tres ampolleta, pero se pudieron haber utilizado distintas, para que se viera el cambio de intensidad. Además se utilizó un tipo interruptor para encender y apagar las ampolletas.
+<img src="/img/Circuito_En_Paralelo.png" alt="Imagen Simple">
+<img src="/img/Circuito_En_Paralelo1.png" alt="Imagen Simple"></p>
+<h2 id="clase-18-de-agosto">Clase 18 de Agosto</h2>
+<p>En esta oportunidad, hicimos un circuito cerrado, se utilizó una batería de 9v, 2 transistores, 2 condensadores, 2 resistencias de 220 ohms y 2 de 100k y por último dos leds. Destacas que los capacitores o condensadores cumplen la función de almacenar energía, de hecho tiene el mismo voltaje que la batería de 9v, la diferencia, es que este la almacena esa energía para luego liberarla cuando sea necesario, en este caso, para mantener encendida o apagada la luz. Se llenan de &ldquo;carga&rdquo; y se la envían a la led (led encendida), luego cuando los electrones pasan al lado positivo (led apagada), actúa como fuente de alimentación cuando la tensión esté baja en el circuito. Por otra parte, los transistores son los encargados de encender y apagar el circuito automáticamente, es decir, evitan que alguien tenga que estar prendiendo y apagando el circuito con un interruptor.Se podría decir que los condensadores y los transistores se complementan ya que un transistor conectado solo a una batería no funcionaría y mantendría todo el tiempo la luz apagada, pero gracias al capacitor es posible hacer el juego de luces (una se prende y la otra se apaga).
+<img src="/img/Circuito_Capacitores.png" alt="Imagen Simple"></p>
 
 </div>
 </div>
