@@ -149,6 +149,30 @@
 <h3 id="circuito-micrófono">Circuito Micrófono</h3>
 <p>Como se ve, este circuito es un poco más complejo que los anteriores en términos de cantidad de elementos y conexiones. Debido a que se utilizó el programa Tinkercad no se pudo poner un mic en el circuito pero se utilizó un fotoresistor, el cual muestra un efecto similar al micrófono. Investigando un poco sobre el circuito, este muestra el funcionamiento de una lueces de dj o luces de disco, las cuales se prenden y apagan en relación al ritmo, volumen y duración de la música. Entonces estas luces se encienden marcando los golpes altos de la música por ejemplo. Es por eso que en en Tinkercad, al aumentar la luz que capta el fotoresistor (haciendo alusión al volumen de la música) las luce se encienden por un milisegundo. Lo mismo sucedería si estuviera el micrófono y este captara un sonido de alta intensidad. Destacar también que el transistor amplifica las señales captadas, y es el encargado de encender las leds en este circuito.
 <img src="/img/Microfonos.png" alt="Imagen Simple"></p>
+<h3 id="circuito-chip-555">Circuito Chip 555</h3>
+<p>En este circuito se hicieron diferentes variaciones para ver le funcionamiento de la luz led. Siguiendo el esquemático original, primero se hizo el circuito tal cual se veía en el esquema, donde se ve que el led prende pero con una advertencia, ya que le estaban llegando más miliamperes de los necesarios. (esto con la resistencia de 220 ohms)
+<img src="/img/Chip555_ResistenciasCambiadas.png" alt="Imagen Simple">
+Luego, la resitencia de 220 ohms se cambió por una de 380 ohms, lo que llevó a un mejor resultado, ya que el led prende de forma correcta.
+<img src="/img/Chip555_ResistenciasNormales.png" alt="Imagen Simple"></p>
+<h3 id="variaciones-chip-555">Variaciones Chip 555</h3>
+<p>Por otra parte, en el mismo circuito se cambió la resistencia número 3 (220 ohms) la cual se encontraba conectada al capacitor, por un potenciómetro, esto para ver qué sucedía con el led. Con esto se logró que el led titilara más rápido cuando el potenciómetro estaba en el lado izquierdo y, por el contrario, fuera disminuyendo la velocidad de las palpitaciones (prender y apagar) a medida que se girara la manilla hacia la derecha.
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/Chip555_Potenciometro.mp4"  type="video/mp4">
+    </video>
+</div></p>
+<p>Por último, para responde la preguntar que se hizo en clases, al usar un fotoresistor, se puede ver que al exponerlo a menos luz las titilaciones son más lentas, y a medida que aumenta la luz, el parpadeo del led lo hace también. Mencionar también que los uf del capacitor al principio era de 10uf, pero para el fotoresistor se usó uno de 100uf, esto ya que entregaba resultados mucho mejores y más notorios. Las resistencias se mantuvieron en 1k y en 380 ohms.
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/VideoChip555.mp4"  type="video/mp4">
+    </video>
+</div></p>
 
 </div>
 </div>
