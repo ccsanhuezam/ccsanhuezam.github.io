@@ -164,7 +164,7 @@ Luego, la resitencia de 220 ohms se cambió por una de 380 ohms, lo que llevó a
     <source src="/img/Chip555_Potenciometro.mp4"  type="video/mp4">
     </video>
 </div></p>
-<p>Por último, para responde la preguntar que se hizo en clases, al usar un fotoresistor, se puede ver que al exponerlo a menos luz las titilaciones son más lentas, y a medida que aumenta la luz, el parpadeo del led lo hace también. Mencionar también que los uf del capacitor al principio era de 10uf, pero para el fotoresistor se usó uno de 100uf, esto ya que entregaba resultados mucho mejores y más notorios. Las resistencias se mantuvieron en 1k y en 380 ohms.
+<p>Por último, para responder la pregunta que se hizo en clases, al usar un fotoresistor, se puede ver que al exponerlo a menos luz las titilaciones son más lentas, y a medida que aumenta la luz, el parpadeo del led lo hace también. Mencionar también que los uf del capacitor al principio era de 10uf, pero para el fotoresistor se usó uno de 100uf, esto ya que entregaba resultados mucho mejores y más notorios. Las resistencias se mantuvieron en 1k y en 380 ohms.
 <div>
     <video 
     width="100%" 
@@ -314,6 +314,58 @@ Código</p>
 <p>}</p>
 <h2 id="tarea-8">Tarea 8</h2>
 <h3 id="knight-rider">Knight Rider</h3>
+<p>Este circuito está inspirado en una serie de los años 80 en donde David Hasselhoff manejaba un auto con unas luces bastante llamativas, ese efecto se logró con este circuito de 8 leds conectadas a los pines 2 al 9 de la placa. Para el código se utilizó un &ldquo;for&rdquo; para realizar el movimiento de las luces, es decir, que se fueran encendiendo de a tres y apagando a la vez, para luego devolverse de manera continua. Es por eso que en el código los primeros 3 leds (i, i+1 e i+2) se mantienen en &ldquo;HIGH&rdquo; pero luego solo se apagan 2 (i e i+1), logrando siempre mantener tres leds encendidas y generar el efecto visual de movimiento del color rojo en este caso.
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/KnightRider.mp4"  type="video/mp4">
+    </video>
+</div>
+Código
+<img src="/img/KnightRider1.png" alt="Imagen Simple">
+<img src="/img/KnightRider2.png" alt="Imagen Simple"></p>
+<h3 id="efecto-ola">Efecto OLA</h3>
+<p>Para este circuito se utilizaron exactamente los mismo elementos que para el anterior, la diferencia es que se modificó una parte del código para que a medida que las luces se prendieran, estas se quedaran encendidas hasta llegar al último led y luego se fueran apagando de la misma forma pero al revés. Para esto, en la primera parte del void loop, se cambiaron los comandos de &ldquo;LOW&rdquo; de i e i+1 que representan los leds 1 y 2 (hacen que la luz se apague luego prenderse) por el &ldquo;HIGH&rdquo;, lo que hizo que estas se mantuvieran encendidas a medida que se avanzaba por la línea de leds.
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/KR_Ola.mp4"  type="video/mp4">
+    </video>
+</div>
+Código
+<img src="/img/Ola1.png" alt="Imagen Simple">
+<img src="/img/Ola2.png" alt="Imagen Simple"></p>
+<h3 id="iteración-personal">Iteración Personal</h3>
+<p>Jugando un poco con el código de arduino original (knight rider), se logró hacer que las luces de izquierda a derecha primero se fueran prendiendo una a una pero apagándose luego de esto de manera instántanea (&ldquo;high&rdquo; y luego &ldquo;low&rdquo; inmediatamente). Pero devuelta se mantuvo el mismo efecto del knight rider, es decir que se prendieran de a tres y se fueran apagando pasando el tercer led (hablando de derecha a izquierda).
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/KR_Miiteracion.mp4"  type="video/mp4">
+    </video>
+</div>
+Código
+<img src="/img/Iteracion1.png" alt="Imagen Simple">
+<img src="/img/Iteracion2.png" alt="Imagen Simple"></p>
+<h3 id="led-rgb--potenciómetros">Led RGB + Potenciómetros</h3>
+<p>El objetivo de este circuito es controlar o cambiar los colores del LED RGB utilizando 3 potenciómetros gracias a los diferentes valores que entrega cada uno. Es por eso que en este circuito los colores son más que los tres princiales, ya que al girar las manillas de los diferentes potenciómetros se van mezclando los valores que entrega cada uno, originando una alta gama de colores como magenta, celeste, verde más claro, morado, entre otros. Las &ldquo;patitas&rdquo; centrales de cada potenciómetro están conectadas a las entradas análogas A0, A1 y A2 y las de los extremos están conectadas al pin de 5v y GND de la placa arduino. Cada uno de los diodos del led, excepto el más largo que va a tierra, está conectado a los pines 9, 10 y 11 haciendo alusión a los colores rojo, verde y azul. Luego de todas las conexiones, y usando el código correcto (ahora se añadió el &ldquo;void color&rdquo; para identificar cada color). Por último, tener en cuenta que los colores están dentro de los valores 0 - 255 (0 apagado y 255 máxima intensidad del color). Y además, los valores de 0 a 1032 hacen alusión a lo que Arduino puede leer de los potenciómetros (valores que forman los colores), por lo que la señal de estos siempre está entre esos valores.
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/LedRGB_Colores.mp4"  type="video/mp4">
+    </video>
+</div>
+Código
+<img src="/img/LedColores1.png" alt="Imagen Simple">
+<img src="/img/LedColores2.png" alt="Imagen Simple">
+<img src="/img/LedColores3.png" alt="Imagen Simple"></p>
 
 </div>
 </div>
