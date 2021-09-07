@@ -173,6 +173,24 @@ Luego, la resitencia de 220 ohms se cambió por una de 380 ohms, lo que llevó a
     <source src="/img/VideoChip555.mp4"  type="video/mp4">
     </video>
 </div></p>
+<h2 id="tarea-6">Tarea 6</h2>
+<p>Opinión documental &ldquo;How to mine gold from electronics&rdquo;
+
+<iframe id='pdf-hugo' src='/pdf/How-To-Mine-Gold-From-Electronics.pdf'
+frameborder="0" scrolling="yes" seamless="seamless" style="display:block; width:100%; height:60vh;"></iframe>
+
+<button onclick="myFunction('pdf-hugo')" class="button button-primary mb-2" style="width: 100%;">Ver Pantalla Completa</button>
+
+<script>
+    function myFunction(id) {
+      document.getElementById(id).classList.add("full-screen");
+    }
+    document.addEventListener('keydown', function(event){
+	if(event.key === "Escape"){
+        document.getElementById('pdf-hugo').classList.remove("full-screen");
+	}
+});
+</script></p>
 <h2 id="tarea-7">Tarea 7</h2>
 <h3 id="blink">Blink</h3>
 <p>Aquí se muestra un circuito bastante simple, en donde se utiliza un led conectado al pin 13 de la placa, una resistencia de 330 ohms y una placa Arduino UNO programa con un código previamente para lograr que el led se encienda y se apague, en este caso, cada un segundo.</p>
