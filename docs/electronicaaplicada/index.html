@@ -173,6 +173,147 @@ Luego, la resitencia de 220 ohms se cambió por una de 380 ohms, lo que llevó a
     <source src="/img/VideoChip555.mp4"  type="video/mp4">
     </video>
 </div></p>
+<h2 id="tarea-7">Tarea 7</h2>
+<h3 id="blink">Blink</h3>
+<p>Aquí se muestra un circuito bastante simple, en donde se utiliza un led conectado al pin 13 de la placa, una resistencia de 330 ohms y una placa Arduino UNO programa con un código previamente para lograr que el led se encienda y se apague, en este caso, cada un segundo.</p>
+<p><div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/Blink.mp4"  type="video/mp4">
+    </video>
+</div>
+Código</p>
+<p>void setup() {</p>
+<p>pinMode(13, OUTPUT);</p>
+<p>}</p>
+<p>void loop() {</p>
+<p>digitalWrite(13, HIGH);   // turn the LED on (HIGH is the voltage level)</p>
+<p>delay(1000);                       // wait for a second</p>
+<p>digitalWrite(13, LOW);    // turn the LED off by making the voltage LOW</p>
+<p>delay(1000);                       // wait for a second</p>
+<p>}</p>
+<h3 id="potenciómetro">Potenciómetro</h3>
+<p>En este circuito se utiliza un potenciómetro para controlar o regular la velocidad de las palpitaciones de un led. El pin del medio del potenciómetro es el encargado de entregar al led un voltaje entre 0 y 5, es por eso que dependiendo de la posición de la perilla, el led enciende y apaga más rápido o más lento. Es decir cuando le llegan 5 volts el led titila mucho más rápido y cuando le entregan 0 volts va muy lento.
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/led-potenciometro.mp4"  type="video/mp4">
+    </video>
+</div>
+Código</p>
+<p>int sensorPin = 0;</p>
+<p>int ledPin = 13;</p>
+<p>void setup() {</p>
+<p>// put your setup code here, to run once:</p>
+<p>pinMode(13, OUTPUT);</p>
+<p>}</p>
+<p>void loop() {</p>
+<p>// put your main code here, to run repeatedly:</p>
+<p>int sensorValue;</p>
+<p>sensorValue = analogRead(0);</p>
+<p>digitalWrite(13, HIGH);</p>
+<p>delay(sensorValue);</p>
+<p>digitalWrite(13, LOW);</p>
+<p>delay(sensorValue);</p>
+<p>}</p>
+<h3 id="led-rgb">Led RGB</h3>
+<p>En este circuito el elemento principal es led RGB el cual es distinto a un led normal, ya que tiene 4 &ldquo;patitas&rdquo;, la más larga que va a tierra, y los demás son 3 diodos que emiten color, cada uno conectado a los pines 9,10 y 11 de la placa, los cuales al combinarse pueden formar una alta gama de colores, este ejercicio se mostrará más adelante. En esta oportunidad el circuito solo logra que el led cambie de color a los tres principales, rojo, verde y azul repetidas veces con un delay de 1000 milisegundos entre cada color.
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/Led-RGB.mp4"  type="video/mp4">
+    </video>
+</div>
+Código</p>
+<p>const int RED_PIN = 9;</p>
+<p>const int GREEN_PIN = 10;</p>
+<p>const int BLUE_PIN = 11;</p>
+<p>int DISPLAY_TIME = 100; // In milliseconds</p>
+<p>void setup()</p>
+<p>{</p>
+<p>pinMode(RED_PIN, OUTPUT);</p>
+<p>pinMode(GREEN_PIN, OUTPUT);</p>
+<p>pinMode(BLUE_PIN, OUTPUT);</p>
+<p>}
+void loop()</p>
+<p>{</p>
+<p>digitalWrite(RED_PIN, HIGH);</p>
+<p>digitalWrite(GREEN_PIN, LOW);</p>
+<p>digitalWrite(BLUE_PIN, LOW);</p>
+<p>delay(1000);</p>
+<p>// Green (turn just the green LED on):</p>
+<p>digitalWrite(RED_PIN, LOW);</p>
+<p>digitalWrite(GREEN_PIN, HIGH);</p>
+<p>digitalWrite(BLUE_PIN, LOW);</p>
+<p>delay(1000);</p>
+<p>// Blue (turn just the blue LED on):</p>
+<p>digitalWrite(RED_PIN, LOW);</p>
+<p>digitalWrite(GREEN_PIN, LOW);</p>
+<p>digitalWrite(BLUE_PIN, HIGH);</p>
+<p>delay(1000);</p>
+<p>}</p>
+<h3 id="múltiples-leds">Múltiples Leds</h3>
+<p>Este circuito tampoco tenía mucha dificultad, sino que tenía muchos elementos, pero se iban repitiendo lo qe hacía más fácil hacerlo en la protoboard. Con este circuito se logró que los 8 leds conectados (cada uno con su propia resistencia de 330 ohms) entre los pines 2 y 9 de la placa se fueran encendiendo consecutivamente, pero a la vez se fueran apagando de la misma forma, para luego volver al principio. Esto también fue gracias al código que se utilizó donde se indica que se vayan encendiendo una a una y luego apagando, esto con los comandos HIGH y LOW.
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/Multiples-Leds.mp4"  type="video/mp4">
+    </video>
+</div>
+Código</p>
+<p>int ledPins[] = {2,3,4,5,6,7,8,9};</p>
+<p>void setup()</p>
+<p>{
+int index;</p>
+<p>for(index = 0; index &lt;= 7; index++)</p>
+<p>{</p>
+<p>pinMode(ledPins[index],OUTPUT);</p>
+<p>}</p>
+<p>}</p>
+<p>void loop()</p>
+<p>{</p>
+<p>int index;</p>
+<p>int delayTime = 100; // milliseconds to pause</p>
+<p>for(index = 0; index &lt;= 7; index++)</p>
+<p>{</p>
+<p>digitalWrite(ledPins[index], HIGH); // turn LED on</p>
+<p>delay(delayTime); // pause to slow down</p>
+<p>digitalWrite(ledPins[index], LOW); // turn LED off</p>
+<p>}</p>
+<p>}</p>
+<h3 id="led--fotoresistencia">Led + Fotoresistencia</h3>
+<p>En este circuito se utiliza un fotoresistor el cual varía su resistencia de acuerdo a la cantidad de luz que percibe. También se utilizó un divisor de voltaje (resistencias en serie), lo que ayuda a repartir la cantidad de voltaje suministrada, en este caso el divisor de voltaje se usa con el LDR para tener un voltaje variable en relación con la cantidad de luz que se perciba. Es por eso que cuando el divisor reciba mucha luz emitirá un alto voltaje, logrando que el led se encienda con mayor intensidad, por el contrario, cuando reciba poca luz emitirá menos voltaje, lo que hace que el led se prenda con menos intensidad.
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/Led-LDR.mp4"  type="video/mp4">
+    </video>
+</div>
+Código</p>
+<p>const int sensorPin = 0;</p>
+<p>const int ledPin = 9;</p>
+<p>int lightLevel;</p>
+<p>void setup()</p>
+<p>{</p>
+<p>pinMode(ledPin, OUTPUT);</p>
+<p>}</p>
+<p>void loop()</p>
+<p>{</p>
+<p>lightLevel = analogRead(sensorPin);</p>
+<p>analogWrite(ledPin, lightLevel);</p>
+<p>}</p>
+<h2 id="tarea-8">Tarea 8</h2>
+<h3 id="knight-rider">Knight Rider</h3>
 
 </div>
 </div>
